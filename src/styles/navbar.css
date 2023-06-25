@@ -1,0 +1,88 @@
+.navBarContainer{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: #111;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 6%;
+    align-items: center;
+    z-index: 999;
+}
+
+.navBarContainer img{
+    width: 165px;
+}
+.navBarContainer ul{
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+.navBarContainer ul .li{
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 5px;
+}
+.navBarContainer ul .li:after{
+    content: " ";
+    position: absolute;
+    background: #13cf64;
+    height: 1px;
+    width: 0%;
+    right: 0;
+    bottom: -.5px;
+    transition: 0.3s;
+}
+.navBarContainer ul .li:hover::after{
+    left: 0;
+    width: 100%;
+}
+.activeLink{
+    border-bottom: 1px solid #13cf64;
+}
+
+.navBarContainer .menu{
+    padding: 8px;
+    text-align: center;
+    align-items: center;
+    border: 1px solid var(--green);
+    border-radius: 10px;
+    display: none;
+}
+.navBarContainer .menu .fa{
+    color: #fff;
+    font-size: 26px;
+}
+@media (max-width: 520px){
+    .navBarContainer img{
+        width: 135px;
+    }
+    .navBarContainer ul{
+        flex-direction: column;   
+        position: absolute;
+        right: 0;
+        background: rgb(27, 28, 28);
+        width: 100%;     
+        top: 4.3rem;
+        text-align: center;
+        padding: 21px 0;
+        height: 50vh;
+        display: none;
+    }
+    .navBarContainer ul.active{
+        display: flex;
+        animation-name: fademenu;
+        animation-duration: .3s;
+    }
+    .navBarContainer ul .li{
+        padding: 25px 0;
+    }
+    .navBarContainer .menu{
+        display: block;
+    }
+}
+@keyframes fademenu {
+    from {width: 0;}
+    to{width: 100%;}
+}

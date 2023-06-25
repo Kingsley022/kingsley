@@ -1,0 +1,28 @@
+:root{
+    --green: #13cf64;
+    --padding: 12px 6%;
+    --box-shadow: 0 3px 8px rgba(109, 108, 108, 0.5);
+    --background: #111;
+    --light-background: #2f2f2f;
+    --color: #fff;
+    --light-color: #767373;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all .3s linear;
+    font-family: sans-serif;
+}
+p{
+    color: rgb(164, 163, 163);
+}
+h1{
+    color: #fff;
+}
+h3{
+    color: rgb(202, 197, 197);
+}
+b{
+    color: rgb(236, 231, 231);
+}

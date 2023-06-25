@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Quicksand:wght@500&display=swap');
+
+.landingPage{
+    width: 100%;
+    /* margin-top: 7%; */
+    position: relative;
+    display: flex;
+    /* padding: 24px 6%; */
+    align-items: center;
+    background: #111;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.landingPage img{
+    height:510px
+}
+.landingPage q{
+    color: #e4e0e0;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.landingPage .textArea{
+}
+.landingPage .textArea h1{
+    color: var(--green);
+    font-size: 42px;
+    font-family: 'Quicksand', sans-serif;
+}
+.landingPage .textArea h2{
+    color: #fff;
+}
+.landingPage .textArea p{
+    color: #e4e0e0;
+    padding: 17px 0;
+}
+.landingPage .textArea .quote {
+    position: relative;
+}
+
+.landingPage .textArea .quote::before{
+    content: "quote" !important;
+    color: forestgreen;
+
+}
+
+.socials{
+    color: #aef2cb;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    right: 0;
+    position: absolute;
+    top: 8rem;
+    margin-right: 4.5rem;
+}
+.socials i{
+    font-size: 21px;
+    cursor: pointer;
+}
+.socials i:hover{
+    color: var(--green);
+}
+
+@media (max-width: 920px) {
+    .landingPage .textArea h1{
+        font-size: 28px;
+    }
+    .landingPage .textArea h2{
+        font-size: 20px;   
+    }
+}
+@media (max-width: 772px){
+    .landingPage{
+        margin-top: 12%;
+        grid-template-columns: 1fr;
+        height: 50vh;
+    }
+    .landingPage img{
+        display: none;
+    }
+    .landingPage .textArea{
+        text-align: center;
+    }
+    .socials{
+        justify-content: center;
+    }
+} 
+
+@media (max-width: 520px){
+    .landingPage{
+        margin-top: 18%;
+        border-radius: 0 0 95px 95px;
+        width: 100%;
+    }
+    .landingPage .textArea{
+        margin-top: 0;
+    }
+
+    .landingPage .textArea h1{
+        font-size: 22px;
+    }
+}
