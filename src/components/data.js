@@ -123,3 +123,8 @@ export const projects = [
         gitlink: 'https://github.com/Kingsley022/avail_water'
     }
 ];
+export const socials =[
+    {id:1, iconn:'fa fa fa-linkedin',url:"https://www.linkedin.com/in/kingsley-okereke-5b3426221"},
+    {id:2, iconn:'fa fa fa-github', url:"https://github.com/Kingsley022"},
+    {id:3, iconn:'fa fa fa-instagram', url: "https://instagram.com/_just_kingsley?igshid=ZGUzMzM3NWJiOQ=="}
+]

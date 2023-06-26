@@ -1,7 +1,13 @@
 import Button from './common/button';
 import '../styles/landingPage.css';
+import {socials} from './data';
 
 const LandingPage = () => {
+    const HandleRedirection = (url) =>{
+        window.location.href = url
+    }
+
+
     return (
         <div className="landingPage" id='Home'>
             <div className="textArea">
@@ -10,9 +16,9 @@ const LandingPage = () => {
                 <h2>FRONTEND WEB DEVELOPER</h2>
                 <p>I'm a creative and resourceful person who isn't afraid to face new changes and actively seeking for new opportunities to <br/>exhibit and develop my skills.</p>
                 <div className="socials">
-                    <i className="fa fa-linkedin"></i>
-                    <i className="fa fa-github"></i>
-                    <i className="fa fa-instagram"></i>
+                    {socials.map(social => (
+                        <i key={social.id} className={social.iconn} onClick={() => HandleRedirection(social.url)}></i>
+                    ))}
                 </div>
                 <Button placeholder={"MORE ABOUT ME"}/>
             </div>
