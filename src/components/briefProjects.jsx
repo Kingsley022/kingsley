@@ -35,10 +35,16 @@ const BriefProjects = () => {
 
     
                         <div className="textArea"> 
-                            <div className="language">React.Js</div>                           
-                            <p className="description">{project.description}</p>
+                            <div className="language">{project.language}</div>
+                            <ul>
+                                {/* <p>Functionalities</p> */}
+                                {project.funtionalities?.map((functionality, index) => (
+                                    <li key={index}>{functionality}</li>
+                                ))}
+                            </ul>                          
+                            {/* <p className="description">{project.description}</p> */}
                             <div className="btns">
-                                <Button placeholder={'LIVE DEMO'} btnstyle={'btnStyle'} onClick={() => handleClick(project.weblink)}/>
+                                {project.weblink && <Button placeholder={'LIVE DEMO'} btnstyle={'btnStyle'} onClick={() => handleClick(project.weblink)}/>}
                                 <Button placeholder={'GitHub'} btnstyle={'btnStyle'} onClick={() => handleClick(project.gitlink)}/>
                             </div>
                         </div>

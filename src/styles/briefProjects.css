@@ -65,6 +65,7 @@
     top: 0;
     right: 0;
     border-radius: 12px;
+    font-size: 14px;
 }
 .projectsContainer .projects .project .textArea{
     padding: 24px 12px;
@@ -99,6 +100,7 @@
     height: cover;
     border: .3px solid green;
     height: 100%;
+    width: 100%;
     top: 0;
     border-radius: 12px;
     z-index: 7;
@@ -124,11 +126,29 @@
 .projectsContainer .projects .project .textArea p{
     word-spacing: 4px;
 }
+.projectsContainer .projects .project .textArea ul{
+    color: #b5b5b5;
+    width: 100%;
+    margin-left: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* list-style: none; */
+    margin-top: 2rem;
+}
+.projectsContainer .projects .project .textArea ul li{
+    padding: .3rem 0;
+    font-size: 14px;
+}
 .projectsContainer .projects .project .btns{
     display: flex;
     justify-content: space-between;
-    margin-top: 0;
-    padding: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* background: #c7aeae; */
+    left: 0;
+    padding: .5rem;
 }
 
 @media (max-width: 520px){

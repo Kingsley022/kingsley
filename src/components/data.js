@@ -36,9 +36,7 @@ export const skills = [
                 {skill: 'React.Js'},
                 {skill: 'JavaScript'},
                 {skill: 'TypeScript'},
-                {skill: 'Next.js'},
                 {skill: 'Bootstrap'},
-                {skill: 'SASS'},
                 {skill: 'Tailwind'},
                 {skill: 'Chakra UI'},
                 {skill: 'Styled Component'},
@@ -78,23 +76,19 @@ export const projects = [
         id: 4,
         isToggled: false,
         img: quizzy,
-        name: 'e-Commerce' ,
-        language: 'ReactJs',
-        description: `I built this project from scratch using React as a result of mastering the use of CRUD operations in React.
-        I also made use of React-Hooks such as useEffect, 
-     useState and few customHooks. i aslo used some react libraries such as react-hook-form, react-scroll, react-router-dom and more.`,
+        name: 'Gaming' ,
+        language: 'ReactJs | NodeJs | ExpressJs | MongoDB',
+        funtionalities: ["Users can take quizzes", "Users can ceate quizzes", "Users can delete quizzes they created", "Authenticate user"],
         weblink: '',
-        gitlink: 'https://github.com/Kingsley022/game-hub'
+        gitlink: ' https://github.com/Kingsley022/Quiz-app'
     },
     {
         id: 1,
         isToggled: false,
         img: game_hub,
-        name: 'e-Commerce' ,
-        language: 'ReactJs',
-        description: `I built this project from scratch using React as a result of mastering the use of CRUD operations in React.
-        I also made use of React-Hooks such as useEffect, 
-     useState and few customHooks. i aslo used some react libraries such as react-hook-form, react-scroll, react-router-dom and more.`,
+        name: 'Gaming',
+        language: 'ReactJs | Typescript | chakraUI',
+        funtionalities: ["Search for games", "Filter games"],
         weblink: 'https://game-hub-ebon-seven.vercel.app',
         gitlink: 'https://github.com/Kingsley022/game-hub'
     },
@@ -103,10 +97,8 @@ export const projects = [
         isToggled: false,
         img: amazon_clone,
         name: 'e-Commerce' ,
-        language: 'JavaScript',
-        description: `I built this project from scratch using React as a result of mastering the use of CRUD operations in React.
-        I also made use of React-Hooks such as useEffect, 
-        useState and few customHooks. i aslo used some react libraries such as react-hook-form, react-scroll, react-router-dom and more.`,
+        language: 'ReactJs | Typescript',
+        funtionalities: ["shopping Cart Funtionalities"],
         weblink: 'https://amazon-clone-gamma-eight.vercel.app/',
         gitlink: 'https://github.com/Kingsley022/amazon_clone'
     },
@@ -114,12 +106,20 @@ export const projects = [
         id: 3,
         isToggled: false,
         img: netflix_clone,
-        name: 'Todo',
-        language: 'JavaScript',
-        description: `I built this project from scratch using React as a result of mastering the use of CRUD operations in React.
-        I also made use of React-Hooks such as useEffect, 
-        useState and few customHooks. i aslo used some react libraries such as react-hook-form, react-scroll, react-router-dom and more.`,
+        name: 'Netflix',
+        language: 'ReactJs | Firebase',
+        funtionalities: ["Authentication using firebase", "Search for movies", "Filter movies", "Play movie"],
         weblink: 'https://netflix-clone-beige-eta.vercel.app/',
         gitlink: 'https://github.com/Kingsley022/netflix_clone'
+    },
+    {
+        id: 5,
+        isToggled: false,
+        img: avail_water,
+        name: 'Avail_waters',
+        language: 'ReactJs',
+        funtionalities: ["Booking of water", "Adding to cart", "Delete cart item", "Auto price calculation"],
+        weblink: 'https://avail-water.vercel.app/',
+        gitlink: 'https://github.com/Kingsley022/avail_water'
     }
 ];
