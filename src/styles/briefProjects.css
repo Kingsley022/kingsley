@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Bruno+Ace+SC&family=Darumadrop+One&family=Exo+2:wght@500&family=Francois+One&family=Noto+Sans+JP:wght@500&family=Quicksand:wght@500&family=Signika+Negative:wght@300&family=Tsukimi+Rounded:wght@500&family=Varela+Round&family=Ysabeau:wght@200&display=swap');
 .projectsContainer{
     margin-top: 4rem;
     width: 100%;
-    position: relative;
+    /* position: relative; */
     padding: var(--padding);
 }
 .projectsContainer h1{
@@ -9,157 +10,48 @@
     margin-right: 8rem;
 }
 .projectsContainer .projects{
-    width: 100%;
     display: grid;
-    grid-auto-flow: column;
-    grid-auto-rows: min-content;
-    grid-auto-columns: 45%;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: hidden;
     gap: 2rem;
-    overflow-x: auto;
-    overflow-y: hidden;
-    overscroll-behavior-inline: contain;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    padding: 17px;
-    grid-auto-rows: max-content;
-    scroll-behavior: smooth;
-    /* scroll-snap-type: X mandatory; */
 }
-.projects::-webkit-scrollbar{
-    background: transparent;
-}
+
 .projectsContainer .projects .project{
-    border-radius: 10px;
-    border: 1px solid grey;
-    grid-row-end: span 2;
+    border-radius: 12px;
+    border: 1px solid #fff;
     position: relative;
-    padding: .05rem;
+    background: #e8e8e8;
+    cursor: pointer;
+}
+
+.projectsContainer .projects .project .projectImg{
+    width: 100%;
+    /* height: 100%; */
+    position: relative;
+    border-radius: 12px;
+}
+.projectsContainer .projects .project .projectImg img{
+    object-fit: contain;
+    object-position: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px 12px 0 0;
 }
 .projectsContainer .projects .project .description{
-    font-size: 14px;
-    margin-top: 2.5rem;
+    color: #111;
+    font-weight: bold;
+    text-align: center;
+    padding: .5rem 0;
+    font-family: 'Exo 2', sans-serif;
 }
-.projectsContainer .projects .project .projectImg{
-    background: #3c3d3b;
-    cursor: pointer;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    border-radius: 12px;
-}
-
-.projectsContainer .projects .project .projectImg img{
-    object-fit: cover;
-    object-position: center center;
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-}
-.projectsContainer .projects .project .language{
-    color: #fff;
-    border: 1px solid green;
-    display: inline-block;
-    padding: .2rem .5rem;
-    margin: .8rem .3rem;
-    position: absolute;
-    top: 0;
-    right: 0;
-    border-radius: 12px;
-    font-size: 14px;
-}
-.projectsContainer .projects .project .textArea{
-    padding: 24px 12px;
-}
-.projectsContainer .projects .project .textArea .header{
-    display: flex;
-    justify-content: space-between;
-    font-weight: bolder;
-    /* font-size: larger; */
-    margin-bottom: 2rem;
-}
-.projectsContainer .projects .project button{
-    color: var(--color);
-    background: none;
-    padding: 2px 12px;
-    border: 1px solid var(--green);
-    border-radius: 7px;
-    font-size: 12px;
-    cursor: pointer;
-    transform: .5s linear;
-}
-.projectsContainer .projects .project button:hover{
-    border: 2px solid var(--green)
-}
-
-.projectsContainer .projects .project .textArea{
-    position: absolute;
-    background: #1b1a1a;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: cover;
-    border: .3px solid green;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    border-radius: 12px;
-    z-index: 7;
-    display: none;
-}
-.projectsContainer .projects .project:hover{
-    border: none;
-}
-.projectsContainer .projects .project:hover .textArea{
-    display: block;
-    justify-content: center;
-    animation-name: slideIn;
-    animation-duration: 1s;
-}
-@keyframes slideIn {
-    from{
-        margin-top: -9rem;
-    }
-    to{
-        margin-top: 0;
+@media (max-width: 712px){
+    .projectsContainer .projects{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
-.projectsContainer .projects .project .textArea p{
-    word-spacing: 4px;
-}
-.projectsContainer .projects .project .textArea ul{
-    color: #b5b5b5;
-    width: 100%;
-    margin-left: .5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* list-style: none; */
-    margin-top: 2rem;
-}
-.projectsContainer .projects .project .textArea ul li{
-    padding: .3rem 0;
-    font-size: 14px;
-}
-.projectsContainer .projects .project .btns{
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    /* background: #c7aeae; */
-    left: 0;
-    padding: .5rem;
-}
-
 @media (max-width: 520px){
     .projectsContainer .projects{
-        grid-auto-columns: 85%;
-    }
-    
-    .projectsContainer .projects .project .btns{
-    }
-    .projectsContainer .projects .project .btns .btnStyle, .btns .btnStyle i{
-        font-size: 12px;
-        padding: 3px 6px;
+        grid-template-columns: repeat(1, 1fr);
     }
 }

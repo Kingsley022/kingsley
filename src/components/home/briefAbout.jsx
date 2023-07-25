@@ -1,8 +1,11 @@
-import Header from "./common/header";
-import '../styles/briefAbout.css';
-import Button from './common/button';
+import Header from "../common/header";
+import '../../styles/briefAbout.css';
+import Button from '../common/button';
+import profile from '../../assets/profile.jpg';
+import { useNavigate } from "react-router-dom";
 
 const BriefAbout = () => {
+    const navigate = useNavigate();
     return (
         <div className="briefAboutContainer" id="About">
             <Header placeholder={'About me'}/>
@@ -14,10 +17,10 @@ const BriefAbout = () => {
                     <p>I'm a creative and a fast learner whose ready to explore new opportunities to exhibit my skills, add more to the software communities and develop my skills as well.</p><br/>    
                     <p>I'm currently advancing on being a <b>FULLSTACK</b> web developer to add more value and creativity to the <b>SOFTWARE ECO-SYSTEM</b>.</p>
 
-                    <Button placeholder={'MORE ABOUT ME'} btnstyle={'btnstyle'}/>
+                    <Button placeholder={'MORE ABOUT ME'} btnstyle={'btnstyle'} onClick={() => navigate('/about')}/>
                 </div>
                 <div className="imageArea">
-                    <img src="../images/profile2.jpeg"/>
+                    <img src={profile} />
                 </div>
             </div>
         </div>

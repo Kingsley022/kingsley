@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Bruno+Ace+SC&family=Darumadrop+One&family=Exo+2:wght@500&family=Francois+One&family=Noto+Sans+JP:wght@500&family=Quicksand:wght@500&family=Signika+Negative:wght@300&family=Tsukimi+Rounded:wght@500&family=Varela+Round&family=Ysabeau:wght@200&display=swap');
+
+.selected-project{
+    color: #fff;
+    background: rgba(0, 0, 0, .9);
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    /* text-align: center; */
+    padding: 2rem 6rem;
+    gap: 2rem;
+    position: relative;
+}
+
+.status{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 1rem 6rem;
+}
+.status .icon{
+    font-size: 31px;
+    cursor: pointer;
+}
+.selected-project p{
+    color: #fff;
+    word-spacing: .1rem;
+    font-family: sans-serif;
+}
+
+.selected-project .img-area{
+    
+}
+
+.selected-project .img-area img{
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    height: 80%;
+    border-radius: 8px;
+}
+.selected-project .img-area .img{
+    display: none;
+    transition: .3s;
+    height: 80%;
+}
+.selected-project .img-area .img.active-img{
+    display: block;
+    animation-duration: 1.5s;
+    -webkit-animation-name: imageFade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: imageFade;
+}
+
+@keyframes imageFade{
+    from {
+        transform: scale(.9);
+        opacity: .3;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.selected-project .img-area .dots{
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    gap: .5rem;
+}
+.selected-project .img-area .dots .dot{
+    width: 12px;
+    height: 12px;
+    color: var(--color2);
+    border: 2px solid;
+    border-radius: 50%;
+    transition: .5s ease;
+    cursor: pointer;
+}
+.selected-project .img-area .dots .dot.active-dot{
+    color: var(--color1);
+}
+
+.selected-project .txt-area .funtionalities,
+.selected-project .txt-area .skills{
+    text-align: left;
+    padding: 1rem 0;
+}
+.selected-project .txt-area .funtionalities ul{
+    list-style: none;
+}
+.selected-project .txt-area .funtionalities ul li{
+    margin: .3rem 0;
+}
+.selected-project .txt-area .skills ul{
+    display: flex;
+    margin-top: .5rem;
+    list-style: none;
+    gap: 1rem;
+}
+.selected-project .txt-area .buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.selected-project .txt-area button{
+    color: var(--color1);
+    background: none;
+    padding: 8px 21px;
+    border: 1px solid ;
+    border-radius: 7px;
+    font-size: 12px;
+    cursor: pointer;
+    transform: .5s linear;
+} 
+
+.sub-head {
+    color: var(--color1);
+    text-align: center;
+    margin: .5rem 0;
+    font-family: 'Exo 2', sans-serif;
+}
+.progress{
+    color: #ed6161;
+}
+
+@media (max-width: 912px){
+    .selected-project{
+        height: auto;
+        grid-template-columns: repeat(1, 1fr);
+    }   
+}
+@media (max-width: 512px){
+    .selected-project{
+        grid-template-columns: repeat(1, 1fr);
+        padding: 2rem 1rem;
+        font-size: 12px;
+    }
+    .selected-project .img-area{
+        margin-top: 2rem;
+    }
+    .status{
+        padding: 1rem 2rem;
+    }
+    .status .icon{
+        font-size: 21px;
+    }
+}

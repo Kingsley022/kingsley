@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { myNavLinks } from "./data";
+import { myNavLinks } from "../../src/data";
 import { Link } from 'react-scroll';
+import logo from"../assets/logo2.png";
 import '../styles/navbar.css';
 
 
@@ -25,7 +26,7 @@ const NavBar = () => {
 
     return (
         <div className="navBarContainer">
-            <img src="../images/logo1.png"/>
+            <img src={logo} alt='' className="logo"/>
 
             <ul className={menu ? "active" : undefined}>
                 {navLinks.map((navLink) => (

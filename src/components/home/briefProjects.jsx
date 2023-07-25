@@ -1,26 +1,14 @@
 import { useState } from "react";
-import Header from "./common/header";
-import Button from "./common/button";
-import { projects as myProjects} from "./data";
-import '../styles/briefProjects.css';
+import Header from "../common/header";
+import Button from "../common/button";
+import { projects as myProjects} from "../../data";
+import '../../styles/briefProjects.css';
+import { useNavigate } from "react-router-dom";
 
 const BriefProjects = () => {
+    const navigate = useNavigate();
     const[projects, setProjects] = useState(myProjects);
 
-    const toggleDetails = project =>{
-        const newProjects = projects.map(newProject => {
-            if(newProject.id === project.id){
-                return {...newProject, isToggled: !newProject.isToggled};
-            }else{
-                return newProject
-            }
-        })
-        setProjects(newProjects);
-    }
-
-    const handleClick = (url) =>{
-        window.open(url, '_blank');
-    }
 
     return (
         <div className="projectsContainer" id="Projects">
@@ -28,29 +16,27 @@ const BriefProjects = () => {
 
             <div className="projects">
                 {projects.map( (project, index) => (
-                     <div className="project" key={project.id}>
+                     <div className="project" key={project.id} onClick={() => navigate('/project/' + index)}>
                         <div className="projectImg">
                             <img src={project.img}/>
                         </div>
 
+                        <h3 className="description">{project.name}</h3>
     
-                        <div className="textArea"> 
+                        {/* <div className="textArea"> 
                             <div className="language">{project.language}</div>
                             <ul>
-                                {/* <p>Functionalities</p> */}
                                 {project.funtionalities?.map((functionality, index) => (
                                     <li key={index}>{functionality}</li>
                                 ))}
                             </ul>                          
-                            {/* <p className="description">{project.description}</p> */}
                             <div className="btns">
                                 {project.weblink && <Button placeholder={'LIVE DEMO'} btnstyle={'btnStyle'} onClick={() => handleClick(project.weblink)}/>}
                                 <Button placeholder={'GitHub'} btnstyle={'btnStyle'} onClick={() => handleClick(project.gitlink)}/>
                             </div>
-                        </div>
+                        </div> */}
                  </div>
                 ))}
-               
             </div>
         </div>
     );

@@ -1,5 +1,7 @@
 :root{
     --green: #13cf64;
+    --color1: #06C7DA;
+    --color2: #bee8ec;
     --padding: 12px 6%;
     --box-shadow: 0 3px 8px rgba(109, 108, 108, 0.5);
     --background: #111;
@@ -25,4 +27,7 @@ h3{
 }
 b{
     color: rgb(236, 231, 231);
+}
+.home{
+    background: #111;
 }

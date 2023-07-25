@@ -1,6 +1,6 @@
-import '../styles/skills.css';
-import Header from './common/header';
-import { skills } from './data';
+import '../../styles/skills.css';
+import Header from '../common/header';
+import { skills } from '../../data';
 const Skills = () => {
     
     return (

@@ -4,7 +4,7 @@ import BriefAbout from './briefAbout';
 import BriefProjects from './briefProjects';
 
 
-const Home = () => {
+const HomeComponents = () => {
     return (
         <>
             <LandingPage/>
@@ -15,4 +15,4 @@ const Home = () => {
     );
 }
  
-export default Home;
+export default HomeComponents;
